@@ -12,11 +12,26 @@ Or, do manual install:
 * If you want to use git version of plugin, add
 `"nunjucks-brunch": "git+ssh://git@github.com:brunch/nunjucks-brunch.git"`.
 
+### Brunch plugin settings
+If customization is needed or desired, settings can be modified in your brunch
+config file (such as `brunch-config.coffee`):
+
+* __pathReplace__: _(RegExp)_ Sets the regular expression applied against the source file path to create the module name. Matched characters are removed. Default `/^.*views\//`
+
+**Example:**
+```coffeescript
+exports.config =
+  ...
+  plugins:
+    nunjucks:
+      pathReplace: /^.*views\//
+```
+
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2012-2013 Paul Miller (http://paulmillr.com)
+Copyright (c) 2014 Daniel Jost (http://danieljost.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
