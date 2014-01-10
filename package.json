@@ -1,0 +1,21 @@
+{
+  "name": "nunjucks-brunch",
+  "version": "0.1.0",
+  "description": "Adds nunjucks support to brunch.",
+  "author": "Daniel Jost (PxlBuzzard)",
+  "homepage": "https://github.com/PxlBuzzard/nunjucks-brunch",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:PxlBuzzard/nunjucks-brunch.git"
+  },
+  "keywords": [
+    "brunch",
+    "brunch-plugin",
+    "nunjucks"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "nunjucks": "~1.0.0"
+  }
+}
