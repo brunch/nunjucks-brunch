@@ -9,7 +9,7 @@ Or, do manual install:
 * Add `"nunjucks-brunch": "x.y.z"` to `package.json` of your brunch app.
   Pick a plugin version that corresponds to your minor (y) brunch version.
 * If you want to use git version of plugin, add
-`"nunjucks-brunch": "git+ssh://git@github.com:brunch/nunjucks-brunch.git"`.
+`"nunjucks-brunch": "git@github.com:PxlBuzzard/nunjucks-brunch.git"`.
 
 ### Brunch plugin settings
 If customization is needed or desired, settings can be modified in your brunch
