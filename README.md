@@ -1,6 +1,5 @@
 ## nunjucks-brunch
-Adds nunjucks support to
-[brunch](http://brunch.io).
+Adds nunjucks support to [brunch](http://brunch.io).
 
 ## Usage
 Install the plugin via npm with `npm install --save nunjucks-brunch`.
@@ -16,7 +15,9 @@ Or, do manual install:
 If customization is needed or desired, settings can be modified in your brunch
 config file (such as `brunch-config.coffee`):
 
-* __pathReplace__: _(RegExp)_ Sets the regular expression applied against the source file path to create the module name. Matched characters are removed. Default `/^.*views\//`
+* __templatePath__: The top-level directory where your nunjucks templates are stored. Default `app/views`. Windows users will want to use `app\\views`.
+
+* __pathReplace__: _(RegExp)_ Sets the regular expression applied against the source file path to create the module name. Matched characters are removed. Default `/^app(\/|\\)views(\/|\\).*.html$/`
 
 **Example:**
 ```coffeescript
@@ -24,7 +25,7 @@ exports.config =
   ...
   plugins:
     nunjucks:
-      pathReplace: /^.*views\//
+      pathReplace: /^app(\/|\\)views(\/|\\).*.html$/
 ```
 
 ## License
