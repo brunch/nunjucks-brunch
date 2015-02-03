@@ -57,7 +57,7 @@ module.exports = class nunjucksBrunchPlugin
   templateFactory: ( data, options, templatePath, callback ) ->
     try
       env = new nunjucks.Environment ( new nunjucks.FileSystemLoader ( path.dirname templatePath ) )
-      template = env.renderString data
+      template = env.renderString data, options
     catch e
       error = e
 
@@ -67,7 +67,7 @@ module.exports = class nunjucksBrunchPlugin
     templatePath = path.resolve originalPath
     relativePath = path.relative @projectPath, templatePath
 
-    options = _.extend {}, @options
+    options = _.extend {}, @nunjucksOptions
     options.filename ?= relativePath
 
     successHandler = ( error, template ) =>
