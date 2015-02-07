@@ -19,6 +19,8 @@ config file (such as `brunch-config.coffee`):
 
 * __pathReplace__: _(RegExp)_ Sets the regular expression applied against the source file path to create the module name. Matched characters are removed. Default `/^app(\/|\\)views(\/|\\).*.html$/`
 
+All other data in `plugins.nunjucks` will be made available in the template's local scope.
+
 **Example:**
 ```coffeescript
 exports.config =
@@ -26,6 +28,7 @@ exports.config =
   plugins:
     nunjucks:
       pathReplace: /^app(\/|\\)views(\/|\\).*.html$/
+      customLocalVar: 'whatever I want'
 ```
 
 ## License
