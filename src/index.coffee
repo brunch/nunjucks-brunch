@@ -43,6 +43,9 @@ module.exports = class nunjucksBrunchPlugin
     else
       @nunjucksOptions = _.omit options, 'filePatterns', 'path'
 
+    @nunjucksEnv = new nunjucks.Environment ( new nunjucks.FileSystemLoader ( @templatePath ) )
+
+
   makeOptions: ( data ) ->
     # Allow for default data in the nunjucks options hash
     if @nunjucksOptions.locals?
@@ -56,8 +59,7 @@ module.exports = class nunjucksBrunchPlugin
 
   templateFactory: ( data, options, templatePath, callback ) ->
     try
-      env = new nunjucks.Environment ( new nunjucks.FileSystemLoader ( path.dirname templatePath ) )
-      template = env.renderString data, options
+      template = @nunjucksEnv.renderString data, options
     catch e
       error = e
 
