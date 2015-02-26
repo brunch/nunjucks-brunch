@@ -41,10 +41,14 @@ module.exports = class nunjucksBrunchPlugin
     else
       @nunjucksOptions = _.omit options, 'filePatterns', 'path'
 
-  templateFactory: ( templatePath, options, callback ) ->
+  templateFactory: ( data, options, templatePath, callback ) ->
     try
-      env = new nunjucks.Environment ( new nunjucks.FileSystemLoader ( path.dirname templatePath ) )
-      template = env.render options.filename, options
+      if data
+        tmpl = new nunjucks.Template( data )
+        template = tmpl.render options
+      else
+        env = new nunjucks.Environment( new nunjucks.FileSystemLoader ( path.dirname templatePath ) )
+        template = env.render options.filename, options
     catch e
       error = e
 
@@ -82,4 +86,4 @@ module.exports = class nunjucksBrunchPlugin
       else
         callback null, "module.exports = #{template};"
 
-    @templateFactory templatePath, options, successHandler
+    @templateFactory data, options, templatePath, successHandler
