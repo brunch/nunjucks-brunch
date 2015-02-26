@@ -22,8 +22,6 @@ module.exports = class nunjucksBrunchPlugin
   configure: ->
     if @config.plugins?.nunjucks?
       options = @config?.plugins?.nunjucks or @config.plugins.nunjucks
-    else if @config.plugins?.nunjucks?
-      options = @config?.plugins?.nunjucks or @config.plugins.nunjucks
     else
       options = {}
 
@@ -43,21 +41,10 @@ module.exports = class nunjucksBrunchPlugin
     else
       @nunjucksOptions = _.omit options, 'filePatterns', 'path'
 
-  makeOptions: ( data ) ->
-    # Allow for default data in the nunjucks options hash
-    if @nunjucksOptions.locals?
-      locals = _.extend {}, @nunjucksOptions.locals, data
-    else
-      locals = data
-
-    # Allow for custom options to be passed to nunjucks
-    options = _.extend {}, @nunjucksOptions,
-      locals: data
-
-  templateFactory: ( data, options, templatePath, callback ) ->
+  templateFactory: ( templatePath, options, callback ) ->
     try
       env = new nunjucks.Environment ( new nunjucks.FileSystemLoader ( path.dirname templatePath ) )
-      template = env.renderString data
+      template = env.render options.filename, options
     catch e
       error = e
 
@@ -67,8 +54,8 @@ module.exports = class nunjucksBrunchPlugin
     templatePath = path.resolve originalPath
     relativePath = path.relative @projectPath, templatePath
 
-    options = _.extend {}, @options
-    options.filename ?= relativePath
+    options = _.extend {}, @nunjucksOptions
+    options.filename ?= path.basename relativePath
 
     successHandler = ( error, template ) =>
       if error?
@@ -95,4 +82,4 @@ module.exports = class nunjucksBrunchPlugin
       else
         callback null, "module.exports = #{template};"
 
-    @templateFactory data, options, templatePath, successHandler
+    @templateFactory templatePath, options, successHandler
