@@ -20,7 +20,7 @@
   ],
   "main": "./src/index.coffee",
   "scripts": {
-    "prepublish": "rm -rf lib && coffee --bare --output lib/ src/"
+    "test": "mocha test.coffee --watch --compilers coffee:coffee-script/register"
   },
   "license": "MIT",
   "dependencies": {
@@ -29,7 +29,10 @@
     "mkdirp": "==0.5.0"
   },
   "devDependencies": {
-    "coffee-script": "==1.9.1"
+    "chai": "^1.10.0",
+    "coffee-script": "~1.9.0",
+    "mocha": "^2.1.0",
+    "sinon": "^1.12.2"
   },
   "readmeFilename": "README.md",
   "bugs": {
