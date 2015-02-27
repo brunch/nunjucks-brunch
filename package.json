@@ -1,6 +1,6 @@
 {
   "name": "nunjucks-brunch",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Adds nunjucks support to brunch.",
   "author": {
     "name": "Daniel Jost",
@@ -20,7 +20,7 @@
   ],
   "main": "./src/index.coffee",
   "scripts": {
-    "test": "mocha test.coffee --watch --compilers coffee:coffee-script/register"
+    "test": "mocha tests/test.coffee --watch --compilers coffee:coffee-script/register"
   },
   "license": "MIT",
   "dependencies": {
