@@ -1,5 +1,5 @@
 ## nunjucks-brunch
-Adds nunjucks support to [brunch](http://brunch.io).
+Adds [nunjucks](https://mozilla.github.io/nunjucks/) support to [brunch](http://brunch.io).
 
 ## Usage
 Install the plugin via npm with `npm install nunjucks-brunch --save`.
