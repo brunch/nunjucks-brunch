@@ -41,20 +41,18 @@ module.exports = class nunjucksBrunchPlugin
     else
       @nunjucksOptions = _.omit options, 'filePatterns', 'path'
 
-  templateFactory: ( data, options, templatePath, callback ) ->
+  templateFactory: ( templatePath, options, callback ) ->
     try
-      if data
-        tmpl = new nunjucks.Template( data )
-        template = tmpl.render options
-      else
-        env = new nunjucks.Environment( new nunjucks.FileSystemLoader ( path.dirname templatePath ) )
-        template = env.render options.filename, options
+      env = new nunjucks.Environment( new nunjucks.FileSystemLoader ( path.dirname templatePath ) )
+      template = env.render options.filename, options
     catch e
       error = e
 
     callback error, template
 
   compile: ( data, originalPath, callback ) ->
+    # I am avoiding the use of the data variable. Using the file path
+    # lets the template compile correctly when referencing other templates.
     templatePath = path.resolve originalPath
     relativePath = path.relative @projectPath, templatePath
 
@@ -86,4 +84,4 @@ module.exports = class nunjucksBrunchPlugin
       else
         callback null, "module.exports = #{template};"
 
-    @templateFactory data, options, templatePath, successHandler
+    @templateFactory templatePath, options, successHandler
