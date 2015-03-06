@@ -20,7 +20,7 @@
   ],
   "main": "./src/index.coffee",
   "scripts": {
-    "test": "mocha tests/test.coffee --watch --compilers coffee:coffee-script/register"
+    "test": "mocha tests/test.coffee --compilers coffee:coffee-script/register"
   },
   "license": "MIT",
   "dependencies": {
