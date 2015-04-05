@@ -20,7 +20,8 @@
   ],
   "main": "./src/index.coffee",
   "scripts": {
-    "test": "mocha tests/test.coffee --compilers coffee:coffee-script/register"
+    "test": "mocha tests/test.coffee --require coffee-coverage/register --compilers coffee:coffee-script/register",
+    "coverage": "mocha tests/test.coffee --require coffee-coverage/register --compilers coffee:coffee-script/register --reporter mocha-lcov-reporter > coverage.lcov"
   },
   "license": "MIT",
   "dependencies": {
@@ -31,8 +32,11 @@
   "devDependencies": {
     "chai": "^1.10.0",
     "coffee-script": "~1.9.0",
-    "mocha": "^2.1.0",
-    "sinon": "^1.12.2"
+    "mocha": "^2.2.1",
+    "sinon": "^1.14.1",
+    "coffee-coverage": "^0.4.5",
+    "mocha-lcov-reporter": "^0.0.2",
+    "codeclimate-test-reporter": "^0.0.4"
   },
   "readmeFilename": "README.md",
   "bugs": {

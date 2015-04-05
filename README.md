@@ -1,4 +1,5 @@
-## nunjucks-brunch [![](https://img.shields.io/travis/PxlBuzzard/nunjucks-brunch.svg)](https://travis-ci.org/PxlBuzzard/nunjucks-brunch) [![](https://img.shields.io/npm/v/nunjucks-brunch.svg)](https://www.npmjs.com/package/nunjucks-brunch)
+## nunjucks-brunch [![](https://img.shields.io/travis/PxlBuzzard/nunjucks-brunch.svg)](https://travis-ci.org/PxlBuzzard/nunjucks-brunch) [![](https://img.shields.io/npm/v/nunjucks-brunch.svg)](https://www.npmjs.com/package/nunjucks-brunch)  [![](https://img.shields.io/codeclimate/coverage/github/PxlBuzzard/nunjucks-brunch.svg)](https://codeclimate.com/github/PxlBuzzard/nunjucks-brunch)
+
 Adds [nunjucks](https://mozilla.github.io/nunjucks/) support to [brunch](http://brunch.io).
 
 ## Usage
