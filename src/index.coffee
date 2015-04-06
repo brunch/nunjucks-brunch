@@ -33,8 +33,6 @@ module.exports = class nunjucksBrunchPlugin
 
     if options.path?
       @publicPath = options.path
-    else if @config.paths?.public?
-      @publicPath = @config.paths.public
 
     if options.nunjucks?
       @nunjucksOptions = options.nunjucks
