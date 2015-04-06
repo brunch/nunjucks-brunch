@@ -16,7 +16,7 @@ describe 'Plugin', ->
   it 'should be an object', ->
     expect(@plugin).to.be.ok
 
-  it 'should has #compile method', ->
+  it 'should have #compile method', ->
     expect(@plugin.compile).to.be.an.instanceof(Function)
 
   it 'should pass `plugins.nunjucks` data to the template', (done) ->
