@@ -36,7 +36,6 @@ describe 'Plugin', ->
           brunchPlugin: yes
           type: 'template'
           extension: 'html'
-          nunjucksOptions: {}
           path: 'public'
           templatePath: 'app/views'
           filePatterns: /^app(\/|\\)views(\/|\\).*.html$/
@@ -49,6 +48,13 @@ describe 'Plugin', ->
       expect(err).not.to.be.ok
       result = fs.readFileSync compiledFolder + '/variable_before.html', { encoding: 'utf-8' }
       expect(result).to.equal(expected)
+      done()
+
+  it 'should fail if the template path is invalid', (done) ->
+    content = ''
+
+    @plugin.compile '', content, (err) ->
+      expect(err).to.exist
       done()
 
   it 'should extend another template', (done) ->

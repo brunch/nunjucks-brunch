@@ -6,4 +6,4 @@ node_modules/
 lib/
 public/
 html-report/
-coverage.lcov
+lcov.info

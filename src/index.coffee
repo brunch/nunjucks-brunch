@@ -34,10 +34,7 @@ module.exports = class nunjucksBrunchPlugin
     if options.path?
       @publicPath = options.path
 
-    if options.nunjucks?
-      @nunjucksOptions = options.nunjucks
-    else
-      @nunjucksOptions = _.omit options, 'filePatterns', 'path'
+    @nunjucksOptions = _.omit options, 'filePatterns', 'path'
 
   templateFactory: ( templatePath, options, callback ) ->
     try
