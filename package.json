@@ -1,7 +1,7 @@
 {
   "name": "nunjucks-brunch",
-  "version": "0.3.2",
-  "description": "Adds nunjucks support to brunch.",
+  "version": "0.3.3",
+  "description": "Adds nunjucks support to Brunch.",
   "author": {
     "name": "Daniel Jost",
     "url": "http://danieljost.com"
