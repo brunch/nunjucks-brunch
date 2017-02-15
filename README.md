@@ -4,8 +4,8 @@ Adds [Nunjucks](https://mozilla.github.io/nunjucks/) support to [Brunch](http://
 
 ## Usage
 
-Install the plugin via npm with `npm install --save-dev nunjucks-brunch`.
-If you want to use git version of plugin: `npm install --save-dev brunch/nunjucks-brunch`.
+* Install the plugin via npm with `npm install --save-dev nunjucks-brunch`.
+* If you want to use git version of plugin: `npm install --save-dev brunch/nunjucks-brunch`.
 
 ### Brunch plugin settings
 

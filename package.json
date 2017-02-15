@@ -6,11 +6,8 @@
     "name": "Daniel Jost",
     "url": "http://danieljost.com"
   },
-  "homepage": "https://github.com/PxlBuzzard/nunjucks-brunch",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:PxlBuzzard/nunjucks-brunch.git"
-  },
+  "homepage": "https://github.com/brunch/nunjucks-brunch#readme",
+  "repository": "brunch/nunjucks-brunch",
   "keywords": [
     "brunch",
     "brunch-plugin",
@@ -38,8 +35,7 @@
     "mocha-lcov-reporter": "^0.0.2",
     "codeclimate-test-reporter": "^0.0.4"
   },
-  "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/PxlBuzzard/nunjucks-brunch/issues"
+    "url": "https://github.com/brunch/nunjucks-brunch/issues"
   }
 }
