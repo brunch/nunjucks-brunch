@@ -1,18 +1,14 @@
-## nunjucks-brunch [![](https://img.shields.io/travis/PxlBuzzard/nunjucks-brunch.svg)](https://travis-ci.org/PxlBuzzard/nunjucks-brunch) [![](https://img.shields.io/npm/v/nunjucks-brunch.svg)](https://www.npmjs.com/package/nunjucks-brunch)  [![](https://img.shields.io/codeclimate/coverage/github/PxlBuzzard/nunjucks-brunch.svg)](https://codeclimate.com/github/PxlBuzzard/nunjucks-brunch)
+# nunjucks-brunch [![Build status](https://img.shields.io/travis/brunch/nunjucks-brunch.svg)](https://travis-ci.org/brunch/nunjucks-brunch) [![Latest version](https://img.shields.io/npm/v/nunjucks-brunch.svg)](https://www.npmjs.com/package/nunjucks-brunch) [![Test coverage](https://img.shields.io/codeclimate/coverage/github/PxlBuzzard/nunjucks-brunch.svg)](https://codeclimate.com/github/PxlBuzzard/nunjucks-brunch)
 
-Adds [nunjucks](https://mozilla.github.io/nunjucks/) support to [brunch](http://brunch.io).
+Adds [Nunjucks](https://mozilla.github.io/nunjucks/) support to [Brunch](http://brunch.io).
 
 ## Usage
-Install the plugin via npm with `npm install nunjucks-brunch --save`.
 
-Or, do manual install:
-
-* Add `"nunjucks-brunch": "x.y.z"` to `package.json` of your brunch app.
-  Pick a plugin version that corresponds to your minor (y) brunch version.
-* If you want to use git version of plugin, add
-`"nunjucks-brunch": "git@github.com:PxlBuzzard/nunjucks-brunch.git"`.
+Install the plugin via npm with `npm install --save-dev nunjucks-brunch`.
+If you want to use git version of plugin: `npm install --save-dev brunch/nunjucks-brunch`.
 
 ### Brunch plugin settings
+
 If customization is needed or desired, settings can be modified in your brunch
 config file (such as `config.coffee`):
 
@@ -30,3 +26,7 @@ exports.config =
     nunjucks:
       github_username: 'PxlBuzzard'
 ```
+
+## Gratitude
+
+Thanks [Daniel Jost](https://github.com/PxlBuzzard) for creating and maintaining first versions of the plugin.
