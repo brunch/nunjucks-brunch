@@ -1,7 +1,7 @@
 {
   "name": "nunjucks-brunch",
-  "version": "0.3.3",
-  "description": "Adds nunjucks support to Brunch.",
+  "version": "2.10.0",
+  "description": "Adds Nunjucks support to Brunch",
   "author": {
     "name": "Daniel Jost",
     "url": "http://danieljost.com"
@@ -15,27 +15,14 @@
     "template",
     "render"
   ],
-  "main": "./src/index.coffee",
-  "scripts": {
-    "test": "mocha tests/test.coffee --compilers coffee:coffee-script/register",
-    "coverage": "mocha tests/test.coffee --require coffee-coverage/register --compilers coffee:coffee-script/register --reporter mocha-lcov-reporter > lcov.info"
-  },
+  "main": "lib",
+  "bugs": "https://github.com/brunch/nunjucks-brunch/issues",
   "license": "MIT",
   "dependencies": {
-    "nunjucks": "<2.0.0",
-    "lodash": "==3.3.1",
-    "mkdirp": "==0.5.0"
+    "nunjucks": "^3"
   },
   "devDependencies": {
-    "chai": "^1.10.0",
-    "coffee-script": "~1.9.0",
-    "mocha": "^2.2.1",
-    "sinon": "^1.14.1",
-    "coffee-coverage": "^0.4.5",
-    "mocha-lcov-reporter": "^0.0.2",
-    "codeclimate-test-reporter": "^0.0.4"
-  },
-  "bugs": {
-    "url": "https://github.com/brunch/nunjucks-brunch/issues"
+    "mocha": "^5",
+    "chai": "^4"
   }
 }
