@@ -1,6 +1,8 @@
 language: node_js
 node_js:
-  - "0.10"
+  - "node"
+  - "lts/carbon"
+  - "lts/boron"
 addons:
   code_climate:
     repo_token: 8338023ce688b10744c6385ce188e6aa677d9dec682354db836091e034a94d44
