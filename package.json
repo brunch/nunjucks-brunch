@@ -18,7 +18,7 @@
   "main": "./src/index.coffee",
   "scripts": {
     "test": "mocha tests/test.coffee --compilers coffee:coffeescript/register",
-    "coverage": "mocha tests/test.coffee --require coffee-coverage/register --compilers coffee:coffee-script/register --reporter mocha-lcov-reporter > lcov.info"
+    "coverage": "mocha tests/test.coffee --require coffee-coverage/register --compilers coffee:coffeescript/register --reporter mocha-lcov-reporter > lcov.info"
   },
   "license": "MIT",
   "dependencies": {
